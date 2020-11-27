@@ -10,7 +10,7 @@ canvas.height = window.innerHeight
 const context = canvas.getContext('2d')
 const workers = new Array()
 for (let i = 0; i < 8; i++) {
-    workers[i] = new Worker('/assets/worker.js')
+    workers[i] = new Worker('assets/worker.js')
     workers[i].addEventListener('message', event =>
         context.putImageData(event.data, 0, 0)
     )
